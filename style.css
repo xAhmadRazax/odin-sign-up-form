@@ -265,7 +265,7 @@ main {
     outline: none;
     width: 100%;
     border-radius: 5px;
-    box-shadow: inset 0 0 0 2px var(--_BOX_SHADOW_COLOR);
+    box-shadow: inset 0 0 0 3px var(--_BOX_SHADOW_COLOR);
     &:focus-visible {
       --_BOX_SHADOW_COLOR: #000;
     }
