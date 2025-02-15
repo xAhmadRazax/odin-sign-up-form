@@ -148,7 +148,7 @@ main {
   flex-direction: column;
   justify-content: space-between;
   background-color: black;
-  background-image: url("./resources/imgs/nasa-rTZW4f02zY8-unsplash.jpg");
+  background-image: url("../imgs/nasa-rTZW4f02zY8-unsplash.jpg");
   background-size: cover;
   /* display: flex;
   align-items: center; */
