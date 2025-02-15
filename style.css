@@ -1,0 +1,330 @@
+/* EXTERNALS FONTS */
+
+/* INTER */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+/* DANCING SCRIPT */
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+/*
+-------------------------------------------------------
+|  MAIN RESET                                         |
+-------------------------------------------------------
+ */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  line-height: calc(1em + 0.5rem);
+}
+
+*::after,
+*::before {
+  display: block;
+}
+
+:root {
+  --FF-INTER: "inter", serif, system-ui;
+  --FF-NORSE-BOLD: "norse-bold", system-ui;
+  --FF-DANCING-SCRIPT: "Dancing Script", serif;
+  /* colors */
+  /* --PRIMARY-COLOR: oklch(41.93% 0.0451 96.22); */
+  --PRIMARY-COLOR: oklch(0.623 0.214 259.815);
+  --PRIMARY-COLOR-50: oklch(0.932 0.032 255.585);
+  --PRIMARY-COLOR-100: oklch(0.882 0.059 254.128);
+  --PRIMARY-GRAY-500: #333;
+  --PRIMARY-GRAY-200: #555;
+  --PRIMARY-GRAY-50: #e5e7eb;
+  --PRIMARY-WHITE: #fff;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+
+  /* color: #fff; */
+  font-family: var(--FF-INTER);
+  /* line-height: 1.5; */
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--PRIMARY-GRAY-500);
+  background-image: linear-gradient(
+    to bottom right,
+    var(--PRIMARY-GRAY-500),
+    var(--PRIMARY-GRAY-200)
+  );
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+img,
+audio,
+picture,
+video,
+canvas,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+svg {
+  /* display: inline-block; */
+}
+
+p,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+ul,
+ol,
+menu {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+.container {
+  width: 100%;
+  max-width: 80rem;
+  margin-inline: auto;
+  overflow: hidden;
+}
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  /* min-height: calc(100vh - 13.9rem - 7rem - 3rem); */
+}
+
+.bold-700 {
+  font-weight: 700;
+}
+/*
+------------------------------------------
+|   FORM                                 |
+------------------------------------------
+*/
+.section__form {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: 45fr 65fr;
+  grid-template-rows: 1fr;
+  height: 100%;
+}
+
+.form__img-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: black;
+  background-image: url("./resources/imgs/nasa-rTZW4f02zY8-unsplash.jpg");
+  background-size: cover;
+  /* display: flex;
+  align-items: center; */
+}
+
+.form__text-overlay {
+  /* flex-grow: 1; */
+  margin-block-start: 20%;
+  background-color: rgba(0, 0, 0, 0.482);
+  min-height: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.3em;
+  /* text-align: center; */
+  padding-inline: 3.5em;
+  /* font-family: var(--FF-NORSE-BOLD); */
+}
+.form__logo-text {
+  font-size: 5rem;
+  font-weight: 700;
+  font-family: var(--FF-DANCING-SCRIPT);
+  color: var(--PRIMARY-COLOR);
+  text-shadow: 1px 1px 2px var(--PRIMARY-GRAY-50), 0 0 3px var(--PRIMARY-COLOR);
+}
+.form__logo {
+  rotate: -45deg;
+}
+.form__logo svg {
+  height: 10rem;
+  width: 10rem;
+}
+
+.form__img-credit {
+  color: var(--PRIMARY-GRAY-50);
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.482);
+
+  a {
+    color: inherit;
+    border-bottom: 1px solid currentColor;
+
+    &:focus-visible,
+    &:hover {
+      color: var(--PRIMARY-COLOR);
+      border-color: var(--PRIMARY-COLOR);
+    }
+  }
+}
+.form__text-header {
+  --_FORM_INLINE_PADDiNG_START: 4rem;
+  padding-inline-start: var(--_FORM_INLINE_PADDiNG_START);
+}
+.form__text-header {
+  margin-block-start: 4rem;
+  max-inline-size: 85ch;
+}
+.form__text-heading {
+  font-size: 3.2rem;
+  color: var(--PRIMARY-COLOR-100);
+  /* line-height: 1.1; */
+}
+.form__text-desc + p,
+.form__text-desc {
+  font-size: 1.8rem;
+  color: var(--PRIMARY-COLOR-100);
+  margin-block-start: 1.5rem;
+  line-height: 1.6;
+}
+.form__text-desc + p {
+  font-weight: 500;
+}
+
+.form {
+  margin-block-start: 4rem;
+}
+
+.form__control-collection {
+  box-shadow: 2px 2px 4px 2px rgba(245, 245, 245, 0.545);
+  background-color: var(--PRIMARY-COLOR);
+  padding-inline-start: 4rem;
+  padding-block: 2rem;
+  /* font-size: 2rem; */
+  display: grid;
+  grid-template-columns: repeat(2, 40ch);
+  gap: 3.5rem 6rem;
+}
+.form__subtitle {
+  grid-column: 1/-1;
+  margin-block-end: 1rem;
+  font-size: 1.8rem;
+  color: var(--PRIMARY-COLOR-50);
+}
+
+.form__control-container {
+  position: relative;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  /* max-width: 40ch; */
+  .form__control-label {
+    padding-inline: 0.5rem;
+    position: absolute;
+    transform: scale(0) translateX(-5rem);
+  }
+
+  input {
+    --_BOX_SHADOW_COLOR: rgba(165, 165, 165, 0.618);
+    appearance: none;
+    padding: 0.5em;
+    border: none;
+    outline: none;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: inset 0 0 0 2px var(--_BOX_SHADOW_COLOR);
+    &:focus-visible {
+      --_BOX_SHADOW_COLOR: #000;
+    }
+
+    &:user-invalid {
+      --_BOX_SHADOW_COLOR: #f00;
+    }
+    &:required:user-valid {
+      --_BOX_SHADOW_COLOR: #0f0;
+    }
+  }
+  &:has(input:not(input:placeholder-shown)) label {
+    transform: scale(1) translateY(-3.2rem) translateX(-5px);
+    transition: all 0.3s;
+    font-weight: 600;
+  }
+}
+button {
+  display: block;
+  margin-block-start: 3rem;
+  margin-inline-start: 4rem;
+  font-size: 2rem;
+  padding: 1rem 1.5rem;
+  border-radius: 3px;
+  border: none;
+  background-color: var(--PRIMARY-COLOR-50);
+  cursor: pointer;
+
+  &:focus-visible,
+  &:hover {
+    background-color: var(--PRIMARY-COLOR);
+    color: var(--PRIMARY-COLOR-50);
+    box-shadow: 0 0 0 3px rgb(255, 255, 255);
+  }
+}
+.section__form footer {
+  margin-inline-start: 4rem;
+  color: var(--PRIMARY-COLOR-100);
+  margin-block-start: 2rem;
+  font-size: 1.5rem;
+  a {
+    color: inherit;
+    font-weight: bold;
+    border-bottom: 1px solid currentColor;
+    &:hover,
+    &:focus-visible {
+      color: var(--PRIMARY-COLOR);
+    }
+  }
+}
+
+/*
+------------------------------------------
+|   CALCULATOR                           |
+------------------------------------------
+*/
+
+/*
+------------------------------------------
+|   FOOTER                               |
+------------------------------------------
+*/
